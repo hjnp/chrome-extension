@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "Ninja",
+    "description": "The most popular extension ever seen! ",
+    "version": "1",
+    "author": "@hjnp Helder Pinto",
+    "browser_action": {
+        "default_icon": "/assets/icon.png",
+        "default_title": "The ninja extension",
+        "default_popup": "newtab.html"
+    },
+    "chrome_url_overrides": {
+        "newtab": "newtab.html"
+    },
+    "permissions": ["activeTab"],
+    "commands": {
+        "_execute_browser_action": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+F",
+                "mac": "MacCtrl+Shift+F"
+            },
+            "description": "Opens newtab.html"
+        }
+    }
+}
