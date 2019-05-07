@@ -5,21 +5,32 @@
     "version": "1",
     "author": "@hjnp Helder Pinto",
     "browser_action": {
-        "default_icon": "/assets/icon.png",
+        "default_icon": "assets/icon.png",
         "default_title": "The ninja extension",
-        "default_popup": "newtab.html"
+        "default_popup": "popup.html"
     },
     "chrome_url_overrides": {
         "newtab": "newtab.html"
     },
-    "permissions": ["activeTab"],
+    "permissions": ["activeTab", "storage", "declarativeContent"],
     "commands": {
         "_execute_browser_action": {
             "suggested_key": {
                 "default": "Ctrl+Shift+F",
                 "mac": "MacCtrl+Shift+F"
             },
-            "description": "Opens newtab.html"
+            "description": "Opens popup.html"
         }
+    },
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "options_page": "options.html",
+    "icons": {
+        "16": "assets/get_started16.png",
+        "32": "assets/get_started32.png",
+        "48": "assets/get_started48.png",
+        "128": "assets/get_started128.png"
     }
 }
